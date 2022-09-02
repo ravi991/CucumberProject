@@ -15,23 +15,23 @@ public class MutipleLogin {
 	WebDriver driver;
 	
 	@Given("^I am on the demo site login \"([^\"]*)\"$")
-	public void i_am_on_the_demo_site_login(String arg1) throws Throwable {
+	public void i_am_on_the_demo_site_login(String string) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get(arg1);
+		driver.get(string);
 	}
 
 	@When("^I enter userName = \"([^\"]*)\" and password = \"([^\"]*)\"$")
-	public void i_enter_userName_and_password(String arg1, String arg2) throws Throwable {
+	public void i_enter_userName_and_password(String string, String string2) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		WebElement username = driver.findElement(By.name("Email"));
 		WebElement password = driver.findElement(By.name("Password"));
 		username.clear();
-		username.sendKeys(arg1);
+		username.sendKeys(string);
 		password.clear();
-		password.sendKeys(arg2);
+		password.sendKeys(string2);
 	}
 
 	@When("^I click login button$")
@@ -42,10 +42,10 @@ public class MutipleLogin {
 	}
 
 	@Then("^text to display \"([^\"]*)\" text$")
-	public void text_to_display_text(String arg1) throws Throwable {
+	public void text_to_display_text(String string) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		String actualValue=driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[1]/h1")).getText();
-		assertEquals(actualValue,arg1);
+		assertEquals(actualValue,string);
 	}
 
 
