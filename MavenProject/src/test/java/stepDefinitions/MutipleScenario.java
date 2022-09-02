@@ -43,7 +43,7 @@ WebDriver driver;
 	@Given("^user is on GitHub home page \"([^\"]*)\"$")
 	public void user_is_on_GitHub_home_page(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		System.setProperty("webdriver.chrome.driver", "C:\\\\Program Files\\\\chromedriver1.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Program Files\\\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(arg1);
         System.out.println(arg1 + "\t is the site");
@@ -60,7 +60,7 @@ WebDriver driver;
 	@Given("^user is on Twitter home page \"([^\"]*)\"$")
 	public void user_is_on_Twitter_home_page(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		 System.setProperty("webdriver.chrome.driver", "C:\\\\Program Files\\\\chromedriver1.exe");
+		 System.setProperty("webdriver.chrome.driver", "C:\\\\Program Files\\\\chromedriver.exe");
 	        driver = new ChromeDriver();
 	        driver.get(arg1);
 	        System.out.println(arg1 + "\t is the site");
