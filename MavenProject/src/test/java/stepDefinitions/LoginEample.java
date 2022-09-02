@@ -23,12 +23,12 @@ WebDriver driver;
 	}
 
 	@When("^I type login = \"([^\"]*)\" and password = \"([^\"]*)\"$")
-	public void i_type_login_and_password(String string1, String string2) throws Throwable {
+	public void i_type_login_and_password(String string, String string2) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		WebElement username = driver.findElement(By.name("Email"));
 		WebElement password = driver.findElement(By.name("Password"));
 		username.clear();
-		username.sendKeys(string1);
+		username.sendKeys(string);
 		password.clear();
 		password.sendKeys(string2);
 	}
@@ -41,10 +41,10 @@ WebDriver driver;
 	}
 
 	@Then("^I should get \"([^\"]*)\" text$")
-	public void i_should_get_text(String string1) throws Throwable {
+	public void i_should_get_text(String string) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		String actualValue=driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[1]/h1")).getText();
-		assertEquals(actualValue,string1);
+		assertEquals(actualValue,string);
 	}
 
 
