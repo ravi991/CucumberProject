@@ -18,7 +18,7 @@ public class AssertExample {
 	@Given("^I am on the google page \"([^\"]*)\"$")
 	public void i_am_on_the_google_page(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver1.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(arg1);  
 	}
@@ -34,7 +34,7 @@ public class AssertExample {
 	public void i_should_get_webelement_isDisplayed() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Assert.assertEquals(true, googleLogo.isDisplayed());
-        System.out.println("Google logo is displayed – Assert passed");
+        System.out.println("Google logo is displayed â€“ Assert passed");
 	    
 	}
 
