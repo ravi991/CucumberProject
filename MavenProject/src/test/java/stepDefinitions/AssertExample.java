@@ -16,11 +16,11 @@ public class AssertExample {
 	WebElement googleLogo;
 	
 	@Given("^I am on the google page \"([^\"]*)\"$")
-	public void i_am_on_the_google_page(String arg1) throws Throwable {
+	public void i_am_on_the_google_page(String string) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get(arg1);  
+        driver.get(string);  
 	}
 
 	@When("^I search for Google Logo webelement$")
