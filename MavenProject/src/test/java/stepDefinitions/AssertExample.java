@@ -12,21 +12,21 @@ import cucumber.api.java.en.When;
 
 public class AssertExample {
 	
-	WebDriver driver;
+	WebDriver browserObject;
 	WebElement googleLogo;
 	
 	@Given("^I am on the google page \"([^\"]*)\"$")
 	public void i_am_on_the_google_page(String string) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get(string);  
+        browserObject = new ChromeDriver();
+        browserObject.get(string);  
 	}
 
 	@When("^I search for Google Logo webelement$")
 	public void i_search_for_Google_Logo_webelement() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		googleLogo = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/img"));
+		googleLogo = browserObject.findElement(By.xpath("/html/body/div[1]/div[2]/div/img"));
         System.out.println("find and stor the web element for the Google Logo");
 	}
 
