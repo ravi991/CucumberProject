@@ -19,8 +19,8 @@ public class MutipleLogin {
 	    // Write code here that turns the phrase above into concrete actions
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
 		browserObject = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get(string);
+		browserObject.manage().window().maximize();
+		browserObject.get(string);
 	}
 
 	@When("^I enter userName = \"([^\"]*)\" and password = \"([^\"]*)\"$")
