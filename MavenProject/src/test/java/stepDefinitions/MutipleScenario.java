@@ -13,7 +13,9 @@ WebDriver browserObject;
 	public void user_is_on_Google_home_page(String string) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
-        browserObject = new ChromeDriver();
+		ChromeOptions op = new ChromeOptions();
+op.addArguments("--remote-allow-origins=*");
+        browserObject = new ChromeDriver(op);
         browserObject.get(string);
         System.out.println(string + "\t is the site");
 	}
