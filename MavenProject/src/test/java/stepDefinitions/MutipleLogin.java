@@ -18,7 +18,9 @@ public class MutipleLogin {
 	public void i_am_on_the_demo_site_login(String string) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
-		browserObject = new ChromeDriver();
+		ChromeOptions op = new ChromeOptions();
+		op.addArguments("--remote-allow-origins=*");
+		browserObject = new ChromeDriver(op);
 		browserObject.manage().window().maximize();
 		browserObject.get(string);
 	}
