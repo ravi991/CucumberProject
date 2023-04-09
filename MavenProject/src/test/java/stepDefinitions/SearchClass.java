@@ -15,7 +15,7 @@ public class SearchClass {
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
 		ChromeOptions op = new ChromeOptions();
 op.addArguments("--remote-allow-origins=*");
-		browserObject = new ChromeDriver(op);
+		browserObject = new ChromeDriver(op) ;
 		browserObject.get(string);
 	}
 
